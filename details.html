@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="details.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Detail</title>
+
+  </head>
+  <body>
+    
+    <div class="main">
+      <a href="http://127.0.0.1:5500/index.html"> <button class="voltar"><span>&#8656;</span></button></a>
+    <div class="flex-1">
+      <div class="cover"><img src="img/7e24abd207dd6790929e9cc5a2b120c4.webp" alt=""></div>
+      <div class="borLine"></div>
+    <div class="conteudo" id="display"></div>
+
+    <div class="btn">
+      <div class="itemBtn">name</div>
+      <div class="itemBtn">email</div>
+      <div class="itemBtn">telefone</div>
+      <div class="itemBtn">cidade</div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script>
+    let t = new detailTemplate();
+    t.init();
+  </script>
+</html>

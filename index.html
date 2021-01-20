@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - GRID</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <!---->
+    <header>
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="img/LogoTop.png" width="30%" alt="LOGO" />
+      </div>
+
+      <!-- Space Search -->
+      <section>
+        <div class="search-box">
+          <input
+            id="inputBuscar"
+            type="text"
+            class="search"
+            placeholder="Buscar"
+            onkeyup="t.onBuscar()"
+          />
+          <button type="submit" class="search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Icon Profile -->
+      <div class="profile">
+        <img src="img/profile-user.png" width="12%" alt="profile" />
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar-main">
+      <div class="sidebar">
+        <a href="#"
+          ><i class="fas fa-list"></i
+          ><span onclick="t.onSetStatus(0)">Todos</span></a
+        >
+        <a href="#"
+          ><i class="fas fa-check"></i
+          ><span onclick="t.onSetStatus(1)">Atendidos</span></a
+        >
+        <a href="#"
+          ><i class="fas fa-trash"></i
+          ><span onclick="t.onSetStatus(2)">Lixeira</span></a
+        >
+      </div>
+
+      <table
+        class="table"
+        id="myTable"
+        data-filter-control="true"
+        data-show-search-clear-button="true"
+      >
+        <tbody id="itens"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script>
+    let t = new dataTemplete();
+    t.init();
+  </script>
+</html>
